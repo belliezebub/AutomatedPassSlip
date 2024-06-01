@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2024 at 01:02 PM
+-- Generation Time: Jun 01, 2024 at 01:05 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -75,7 +75,7 @@ CREATE TABLE `usersprofile` (
   `lastname` varchar(50) NOT NULL,
   `batch` varchar(10) NOT NULL,
   `section` varchar(10) NOT NULL,
-  `profile_picture` varchar(255) DEFAULT 'assets/img/default.png',
+  `profile_picture` varchar(255) DEFAULT 'uploads/default.png',
   `function` varchar(255) DEFAULT 'Student'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -85,8 +85,8 @@ CREATE TABLE `usersprofile` (
 
 INSERT INTO `usersprofile` (`id`, `firstname`, `lastname`, `batch`, `section`, `profile_picture`, `function`) VALUES
 (2, 'Bellie', 'Jamboy', '32', 'H', 'uploads/pooh.jpg', 'student'),
-(25, 'John', 'Doe', '32', 'H', NULL, 'Teacher'),
-(26, 'Mark', 'Dela Cruz', '33', 'H', 'assets/img/default.png', 'Teacher');
+(25, 'John', 'Doe', '32', 'H', 'uploads/default.png', 'Teacher'),
+(26, 'Mark', 'Dela Cruz', '33', 'H', 'uploads/default.png', 'Teacher');
 
 --
 -- Indexes for dumped tables
