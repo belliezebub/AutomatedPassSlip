@@ -1,6 +1,7 @@
 <?php
 require_once 'Controller/UserController.php';
 require_once 'Controller/HomePageController.php';
+require_once 'Controller/PassSlipController.php';
 
 class PagesController { 
     public function redirectToLoginPage() {
@@ -24,6 +25,11 @@ class PagesController {
         $controller = new UserController();
         $controller->logout();
         $this->home(); // Corrected
+    }
+
+    function form(){
+        $controller = new PassSlipController();
+        $controller->handleRequest();
     }
 }
 ?>
