@@ -1,6 +1,6 @@
 <?php
     require_once 'Controller/PagesController.php';
-
+    require_once 'Controller/UserProfileController.php';
 
     class HomePageController {
         public function run() {
@@ -15,10 +15,11 @@
             
             // If user is logged in, continue with page routing
             $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
-    
+            $controller = new UserProfilesController();
+            
             switch ($page) {
                 case 'dashboard':
-                    require 'profile.php';
+                    $controller->handleRequest();
                     break;
                 case 'completed':
                     $controller = new CompletedController();
@@ -35,7 +36,7 @@
                 case 'logout':
                     $pageController->logout();
                 default:
-                    require 'profile.php';
+                    $controller->handleRequest();
                     break;
             }
         }
