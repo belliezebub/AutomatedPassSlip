@@ -38,13 +38,29 @@ class PassSlipController {
         $this->passSlip->adviser = $data['adviser'];
         $this->passSlip->csd = $data['csd'];
         $this->passSlip->status = 'Subj. Teacher'; // Setting initial status
-    
+
         if ($this->passSlip->create()) {
             return "Pass Slip submitted successfully!";
         } else {
             return "Failed to submit pass slip.";
         }
     }
-    
+
+    public function showForm() {
+        $teachers = $this->getTeachers();
+        require 'View/PassSlipForm.php';
+    }
+
+    public function handleRequest() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $message = $this->createPassSlip($_POST);
+            echo "<script>
+                    alert('$message');
+                    window.history.go(-2);
+                  </script>";
+        } else {
+            $this->showForm();
+        }
+    }
 }
 ?>
