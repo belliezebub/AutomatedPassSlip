@@ -1,5 +1,3 @@
-/* CSS styling for passSlipForm.css */
-
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #cfd9df, #e2ebf0);
@@ -9,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 20px;
+    overflow: auto; /* Allow body to scroll if necessary */
 }
 
 .form-container {
@@ -17,6 +16,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 350px;
+    max-height: 90vh; /* Ensures the form container does not exceed viewport height */
+    overflow-y: auto; /* Adds a scrollbar to the form container if needed */
+    margin-top: 20px; /* Add a bit of top margin to ensure visibility */
 }
 
 form h2 {
@@ -100,7 +102,7 @@ button[type="button"]:hover {
 
 select {
     width: 100%;
-    padding: 30px;
+    padding: 10px; /* Adjust padding to match other input elements */
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
