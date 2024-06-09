@@ -16,9 +16,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 350px;
-    max-height: 90vh; /* Ensures the form container does not exceed viewport height */
-    overflow-y: auto; /* Adds a scrollbar to the form container if needed */
-    margin-top: 20px; /* Add a bit of top margin to ensure visibility */
+    max-height: 90vh; 
+    overflow-y: auto; 
+    margin-top: 20px; 
 }
 
 form h2 {
