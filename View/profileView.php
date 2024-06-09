@@ -28,7 +28,9 @@
                 <div class="task-box" id="complete" onclick="location.href='link_to_complete_tasks.php'">Complete:<br><h1><?php echo isset($completedTasks) ? $completedTasks : 0; ?></h1></div>
             </div>
             <div class="new">
-                <button class="newForm" onclick="location.href='passSlip.php'"><img class="newButton"src="assets/img/newForm.png" alt="New Form"></button>
+                <button class="newForm" onclick="location.href='index.php?page=form'">
+                    <img class="newButton" src="assets/img/newForm.png" alt="New Form">
+                </button>
             </div>          
         </div>
     </div>
